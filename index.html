@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Model</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="background">
+        <div class="object"></div>
+      </div>
+      <div class="controllers">
+        <div class="accordion">
+          <p>Glass Controllers</p>
+
+          <div class="content">
+            <div class="box-wrapper">
+              <label for="glass-blur">Blur:</label>
+              <input type="range" id="glass-blur" min="0" max="30" />
+            </div>
+            <div class="box-wrapper">
+              <label for="glass-transparency">Transparency:</label>
+              <input
+                type="range"
+                id="glass-transparency"
+                min="0"
+                max="1"
+                step="0.01"
+              />
+            </div>
+            <div class="box-wrapper">
+              <label for="glass-radius">Border radius:</label>
+              <input type="range" id="glass-radius" min="0" max="50" />
+            </div>
+            <div class="box-wrapper">
+              <label for="glass-outline">Outline:</label>
+              <input type="range" id="glass-outline" min="0" max="10" />
+            </div>
+
+            <div class="box-wrapper">
+              <label for="color">Color:</label>
+              <input type="color" id="color" />
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <p>Shadow Controllers</p>
+
+          <div class="content">
+            <div class="box-wrapper">
+              <label for="horizontal">Horizontal:</label
+              ><input type="range" id="horizontal" min="-300" max="300" />
+            </div>
+
+            <div class="box-wrapper">
+              <label for="vertical">Vertical:</label
+              ><input type="range" id="vertical" min="-70" max="70" />
+            </div>
+
+            <div class="box-wrapper">
+              <label for="shadow-blur">Blur:</label
+              ><input type="range" id="shadow-blur" />
+            </div>
+
+            <div class="box-wrapper">
+              <label for="shadow-transparency">Transparency:</label
+              ><input
+                type="range"
+                id="shadow-transparency"
+                min="0"
+                max="1"
+                step="0.01"
+              />
+            </div>
+
+            <div class="box-wrapper">
+              <label for="shadow-spread">Spread:</label
+              ><input type="range" id="shadow-spread" min="-50" max="50" />
+            </div>
+
+            <div class="box-wrapper checkbox">
+              <label for="shadow-inset">Inset:</label
+              ><input type="checkbox" id="shadow-inset" />
+            </div>
+
+            <div class="box-wrapper">
+              <label for="shadow-color">Shadow Color:</label
+              ><input type="color" id="shadow-color" />
+            </div>
+          </div>
+        </div>
+
+        <div class="box-wrapper">
+          <label for="css">Gerador CSS:</label>
+          <textarea id="css" cols="30" rows="5"></textarea>
+
+          <button class="btn-copy">Button copy</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/script.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap");
+
+/*
+1- #765D67
+2- #6D3C52
+3- #4B2138
+4- #1B0C1A
+5- #2D222F
+6- #FADCD5
+*/
+
+:root {
+  --color1: #765d67;
+  --color2: #6d3c52;
+  --color3: #4b2138;
+  --color4: #1b0c1a;
+  --color5: #2d222f;
+  --color6: #fadcd5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Arima", system-ui;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+  background: linear-gradient(180deg, #1b0c1a 0%, #2d222f 100%);
+}
+
+.app {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: var(--color6);
+}
+
+.background {
+  position: relative;
+  z-index: 1;
+}
+
+.background::before {
+  position: absolute;
+  content: "Background";
+  top: 50%;
+  left: 50%;
+  font-size: 60px;
+  z-index: -1;
+  text-decoration: underline;
+  transform: translate(-50%, -50%);
+}
+
+.background .object {
+  width: 340px;
+  height: 100px;
+  margin: 30px 0;
+  transform: rotate(-2deg);
+}
+
+.controllers {
+  width: 100%;
+  font-size: large;
+}
+
+.accordion {
+  padding: 6px 10px 0;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.accordion.active {
+  padding: 6px 10px 18px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.accordion .content {
+  display: none;
+}
+
+.accordion .content.active {
+  display: block;
+  margin-top: 20px;
+}
+
+.box-wrapper + .box-wrapper {
+  margin-top: 20px;
+}
+
+.accordion p {
+  display: inline;
+  font-size: x-large;
+  text-align: center;
+}
+
+.accordion.active p {
+  border-bottom: 1px solid gray;
+}
+
+.box-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-wrapper input[type="range"] {
+  width: 100%;
+  height: 5px;
+  border-radius: 4px;
+  appearance: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.box-wrapper input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.box-wrapper input[type="color"] {
+  width: 100%;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.box-wrapper.checkbox {
+  max-width: fit-content;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.controllers > .box-wrapper > label {
+  font-size: x-large;
+}
+
+.box-wrapper #css {
+  font-family: "Roboto Mono", monospace;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.btn-copy {
+  width: 100%;
+  font-size: large;
+  margin-top: 20px;
+  padding: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: red;
+}
